@@ -35,7 +35,7 @@ public class Lever : MonoBehaviour
         if (R2.y > 1) R2.y = 1;
         if (R2.y < -1) R2.y = -1;
 
-        target.transform.localPosition += new Vector3(0,0,R1.y*Time.deltaTime);
+        target.transform.localPosition += new Vector3(0,0,R1.y*5*Time.deltaTime);
         float z = target.transform.localPosition.z;
         float y = target.transform.localPosition.y;
         if (target.transform.localPosition.z > -2) z = -2;
@@ -43,7 +43,7 @@ public class Lever : MonoBehaviour
         target.transform.localPosition = new Vector3(0,y,z);
 
 
-        R_Platform.transform.localRotation = Quaternion.Lerp(R_Platform.transform.rotation, Quaternion.Euler(0, R1.x*100, 0), Time.deltaTime);
+        R_Platform.transform.localRotation *= Quaternion.Euler(0, R1.x*60* Time.deltaTime, 0);
 
         lever1.transform.localPosition = new Vector3(R1.x, 0, R1.y);
         lever2.transform.localPosition = new Vector3(R2.x, 0, R2.y);
