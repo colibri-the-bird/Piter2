@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/OpenAI Unity/0.2.0/Whisper/Whisper Sample.unity
     guid: 8f47e0e7c9e717a4ab6e6faa20ebb0e0
   m_configObjects:
